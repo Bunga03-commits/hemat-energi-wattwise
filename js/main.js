@@ -1,102 +1,181 @@
 /**
  * ===================================================================
- * WATTWISE - JAVASCRIPT CONTROLLER (FASE 1)
- * Kampanye Hemat Energi - Proyek ESD (Education for Sustainable Development)
- * Rombel: PPLG XI-4
- * Anggota Tim:
- * 1. Bunga Khaerunisa
- * 2. Carvidya Nerlita
- * 3. Yemima Grace Abigail Siagian
- * Mata Pelajaran: KIK & PABP
+ * WATTWISE - JAVASCRIPT CONTROLLER (FASE 1, 2, & 3)
+ * Kampanye Hemat Energi - Proyek ESD (PPLG XI-4)
  * ===================================================================
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // -----------------------------------------------------------------
-  // 1. INTERAKSI MENU NAVIGASI RESPONSIF (MOBILE DRAWER)
-  // -----------------------------------------------------------------
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+document.addEventListener("DOMContentLoaded", function () {
+  // === 1. FUNGSI TOMBOL HAMBURGER MENU ===
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.getElementById("navMenu");
 
   if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      const isExpanded = navMenu.classList.toggle('show');
-      navToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-    });
-
-    // Menutup menu mobile saat mengklik di luar area navigasi
-    document.addEventListener('click', (event) => {
-      if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
-        navMenu.classList.remove('show');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
+    navToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("show");
+      const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", !isExpanded);
     });
   }
 
-  // -----------------------------------------------------------------
-  // 2. PLACEHOLDER & KERANGKA LOGIKA UNTUK FASE 2:
-  //    AUDIT & VISUALISASI DATA (CHART.JS)
-  // -----------------------------------------------------------------
-  /*
-   * [TODO FASE 2 - INTEGRASI CHART.JS]:
-   *
-   * A. Impor library Chart.js via CDN atau paket lokal:
-   *    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   *
-   * B. Penyiapan Dataset Konsumsi Energi Sekolah (kWh per ruang/hari):
-   *    const energyData = {
-   *      labels: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'],
-   *      datasets: [
-   *        {
-   *          label: 'Lab Komputer (kWh)',
-   *          data: [42, 38, 45, 39, 30],
-   *          borderColor: '#10B981',
-   *          backgroundColor: 'rgba(16, 185, 129, 0.2)'
-   *        },
-   *        {
-   *          label: 'Ruang Kelas (kWh)',
-   *          data: [28, 26, 29, 27, 20],
-   *          borderColor: '#FBBF24',
-   *          backgroundColor: 'rgba(251, 191, 36, 0.2)'
-   *        }
-   *      ]
-   *    };
-   *
-   * C. Inisialisasi Canvas Chart:
-   *    function renderEnergyChart() {
-   *      const ctx = document.getElementById('energyChartCanvas');
-   *      if (!ctx) return;
-   *      new Chart(ctx, {
-   *        type: 'line',
-   *        data: energyData,
-   *        options: {
-   *          responsive: true,
-   *          plugins: {
-   *            legend: { position: 'top' },
-   *            title: { display: true, text: 'Tren Konsumsi Listrik Mingguan' }
-   *          }
-   *        }
-   *      });
-   *    }
-   */
+  // === 2. GRAFIK CHART.JS (HALAMAN DATA.HTML) ===
+  if (typeof DATA_ENERGI !== "undefined") {
+    const canvasKategori = document.getElementById("grafikKategori");
+    if (canvasKategori) {
+      new Chart(canvasKategori, {
+        type: "pie",
+        data: {
+          labels: ["Sangat Baik", "Baik", "Cukup", "Kurang"],
+          datasets: [{
+            data: [378, 234, 23, 1],
+            backgroundColor: ["#10b981", "#34d399", "#fbbf24", "#ef4444"]
+          }]
+        }
+      });
+    }
 
-  // -----------------------------------------------------------------
-  // 3. PLACEHOLDER & KERANGKA LOGIKA UNTUK FASE 3:
-  //    KALKULATOR PENGHEMATAN DAYA & AKSI CERDAS
-  // -----------------------------------------------------------------
-  /*
-   * [TODO FASE 3 - INTERAKSI SIMULATOR & AUDIT]:
-   *
-   * A. Logika Kalkulator Penghematan:
-   *    function calculateSavings(hoursReduced, wattage, unitCount) {
-   *      const kWhSavedPerDay = (hoursReduced * wattage * unitCount) / 1000;
-   *      const tariffPerKWh = 1444.70; // Tarif dasar listrik sekolah (B2/R2)
-   *      const rupiahSaved = kWhSavedPerDay * tariffPerKWh * 22; // 22 hari sekolah/bulan
-   *      return { kWhSavedPerDay, rupiahSaved };
-   *    }
-   *
-   * B. Form Pendaftaran Komitmen Hemat Energi Siswa
-   */
+    const canvasJurusan = document.getElementById("grafikJurusan");
+    if (canvasJurusan) {
+      new Chart(canvasJurusan, {
+        type: "bar",
+        data: {
+          labels: DATA_ENERGI.per_jurusan.map(item => item.kode),
+          datasets: [{
+            label: "Rata-Rata Skor",
+            data: DATA_ENERGI.per_jurusan.map(item => item.rata_rata_skor),
+            backgroundColor: "#10b981"
+          }]
+        },
+        options: {
+          scales: {
+            y: { beginAtZero: true, max: 4 }
+          }
+        }
+      });
+    }
+  }
 
-  console.log('WattWise Fase 1 loaded: Siap untuk integrasi data di Fase 2.');
+  // === 3. CHECKLIST AKSI HARIAN DENGAN PROGRESS BAR (HALAMAN AKSI.HTML) ===
+  const checkboxes = document.querySelectorAll(".aksi-check");
+  const statusChecklist = document.getElementById("statusChecklist");
+  const progressBarAksi = document.getElementById("progressBarAksi");
+
+  function perbaruiProgressChecklist() {
+    if (!checkboxes.length || !statusChecklist) return;
+
+    const total = checkboxes.length;
+    const selesai = document.querySelectorAll(".aksi-check:checked").length;
+    const persen = Math.round((selesai / total) * 100);
+
+    if (progressBarAksi) {
+      progressBarAksi.style.width = persen + "%";
+    }
+
+    if (selesai === total) {
+      statusChecklist.textContent = `Luar biasa! Semua ${total} aksi hemat energi hari ini selesai (100%)!`;
+      statusChecklist.style.background = "#fef3c7";
+      statusChecklist.style.color = "#78350f";
+    } else {
+      statusChecklist.textContent = `Progress hari ini: ${selesai} dari ${total} aksi selesai (${persen}%).`;
+      statusChecklist.style.background = "#ecfdf5";
+      statusChecklist.style.color = "#047857";
+    }
+
+    // Simpan status centang secara ringan di browser
+    const statusArray = Array.from(checkboxes).map(cb => cb.checked);
+    localStorage.setItem("wattwise_checklist", JSON.stringify(statusArray));
+  }
+
+  if (checkboxes.length > 0) {
+    // Muat ulang centangan tersimpan jika ada
+    const tersimpan = JSON.parse(localStorage.getItem("wattwise_checklist") || "[]");
+    checkboxes.forEach((box, index) => {
+      if (tersimpan[index]) box.checked = true;
+      box.addEventListener("change", perbaruiProgressChecklist);
+    });
+    perbaruiProgressChecklist();
+  }
+
+  // === 4. PENYIMPANAN KOMITMEN RINGAN (MAKSIMAL 15 DATA DI LOCALSTORAGE) ===
+  const formKomitmen = document.getElementById("formKomitmen");
+  const daftarKomitmen = document.getElementById("daftarKomitmen");
+  const STORAGE_KEY = "wattwise_komitmen_list";
+  const MAX_KOMITMEN = 15; // Dibatasi 15 data agar penyimpanan sangat ringan (< 3 KB)
+
+  // Data awal bawaan agar tampilan tidak kosong saat pertama kali dibuka
+  const dataAwal = [
+    { nama: "Bunga - PPLG XI-4", janji: "Selalu mematikan lampu kelas dan mencabut charger sebelum pulang sekolah.", waktu: "Hari ini" },
+    { nama: "Carvidya - PPLG XI-4", janji: "Mengaktifkan mode Battery Saver di laptop saat praktik pemrograman.", waktu: "Hari ini" }
+  ];
+
+  function muatKomitmen() {
+    if (!daftarKomitmen) return;
+
+    let list = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+    if (!list) {
+      list = dataAwal;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+    }
+
+    daftarKomitmen.innerHTML = "";
+    list.forEach(item => {
+      const kartu = document.createElement("div");
+      kartu.style.padding = "10px 14px";
+      kartu.style.background = "#f8fafc";
+      kartu.style.borderLeft = "4px solid #10b981";
+      kartu.style.borderRadius = "6px";
+
+      const header = document.createElement("div");
+      header.style.display = "flex";
+      header.style.justifyContent = "space-between";
+      header.style.fontSize = "0.88rem";
+
+      const strongNama = document.createElement("strong");
+      strongNama.textContent = item.nama;
+
+      const spanWaktu = document.createElement("span");
+      spanWaktu.style.color = "#64748b";
+      spanWaktu.style.fontSize = "0.78rem";
+      spanWaktu.textContent = item.waktu;
+
+      const pJanji = document.createElement("p");
+      pJanji.style.fontSize = "0.9rem";
+      pJanji.style.marginTop = "4px";
+      pJanji.textContent = `"${item.janji}"`;
+
+      header.appendChild(strongNama);
+      header.appendChild(spanWaktu);
+      kartu.appendChild(header);
+      kartu.appendChild(pJanji);
+      daftarKomitmen.appendChild(kartu);
+    });
+  }
+
+  if (formKomitmen && daftarKomitmen) {
+    muatKomitmen();
+
+    formKomitmen.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nama = document.getElementById("namaSiswa").value.trim();
+      const janji = document.getElementById("isiKomitmen").value.trim();
+
+      if (nama && janji) {
+        let list = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        const tanggal = new Date().toLocaleDateString("id-ID", { day: "numeric", month: "short" });
+
+        // Tambahkan komitmen baru di urutan paling atas
+        list.unshift({ nama, janji, waktu: tanggal });
+
+        // Potong jika lebih dari 15 agar penyimpanan tetap sangat ringan
+        if (list.length > MAX_KOMITMEN) {
+          list = list.slice(0, MAX_KOMITMEN);
+        }
+
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+        muatKomitmen();
+        formKomitmen.reset();
+      }
+    });
+  }
 });

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data & Fakta Perilaku Hemat Energi - WattWise PPLG XI-4">
+  <title>Data &amp; Fakta — WattWise</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVBAR -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigasi Utama">
+        <a href="index.html" class="brand-logo" title="WattWise Beranda">
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+          </div>
+          <span class="brand-name">Watt<span>Wise</span></span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Beranda</a></li>
+          <li><a href="tentang.html" class="nav-link">Informasi</a></li>
+          <li><a href="data.html" class="nav-link active" aria-current="page">Data &amp; Fakta</a></li>
+          <li><a href="aksi.html" class="nav-link">Aksi</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- KONTEN UTAMA DATA & FAKTA -->
+  <main>
+    <!-- Banner Judul dengan Foto -->
+    <section class="section hero-dengan-gambar" style="background-image: url('assets/img/ruang304.jpg');">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+          <h1 class="section-title">Hasil Kuesioner Hemat Energi</h1>
+          <p class="section-subtitle">
+            Survei dilakukan kepada <strong>636 siswa kelas XI</strong> dengan rata-rata skor perilaku <strong>3,36 dari 4,00</strong> sebagai dasar kampanye nyata di sekolah.
+          </p>
+        </div>
+
+        <!-- Ringkasan Angka Statistik -->
+        <div class="hero-highlight-strip">
+          <div class="strip-item">
+            <h4>636 Siswa</h4>
+            <p>Total Responden Kelas XI</p>
+          </div>
+          <div class="strip-item">
+            <h4>3,36 / 4,00</h4>
+            <p>Rata-Rata Skor Perilaku</p>
+          </div>
+          <div class="strip-item">
+            <h4>96,2%</h4>
+            <p>Kategori Baik &amp; Sangat Baik</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Grafik Data (Sekarang Terbungkus Container dengan Rapi) -->
+    <section class="section section-bg-alt">
+      <div class="container">
+        <div class="teaser-grid">
+          <!-- Grafik 1 -->
+          <article class="card-item">
+            <h3 class="card-title">1. Kategori Perilaku Siswa</h3>
+            <div style="max-width: 340px; width: 100%; margin: 20px auto;">
+              <canvas id="grafikKategori"></canvas>
+            </div>
+            <p class="card-text" style="margin-bottom: 0; padding: 12px 16px; background: var(--primary-light); border-left: 4px solid var(--primary); border-radius: var(--radius-sm); color: var(--primary-deep);">
+              <strong>Fakta Utama:</strong> Sebanyak <strong>59,4%</strong> (378 siswa) masuk kategori <em>Sangat Baik</em> dan <strong>36,8%</strong> (234 siswa) masuk kategori <em>Baik</em>.
+            </p>
+          </article>
+
+          <!-- Grafik 2 -->
+          <article class="card-item">
+            <h3 class="card-title">2. Rata-Rata Skor per Jurusan</h3>
+            <div style="width: 100%; margin: 20px auto;">
+              <canvas id="grafikJurusan"></canvas>
+            </div>
+            <p class="card-text" style="margin-bottom: 0; padding: 12px 16px; background: var(--accent-light); border-left: 4px solid var(--accent-dark); border-radius: var(--radius-sm); color: #78350f;">
+              <strong>Fakta Utama:</strong> Jurusan <strong>PMN</strong> mendapat skor tertinggi (3,51), sedangkan <strong>PPLG</strong> mendapat skor 3,24 karena tingginya pemakaian komputer praktik.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <span>WattWise</span>
+          </div>
+          <p>
+            Kampanye Hemat Energi sekolah terpadu di bawah kerangka <em>Education for Sustainable Development</em>.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Navigasi Proyek</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang &amp; Identitas Tim</a></li>
+            <li><a href="data.html">Data &amp; Fakta</a></li>
+            <li><a href="aksi.html">Aksi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Informasi Tim</h4>
+          <ul class="footer-links">
+            <li><span>Rombel: <strong>PPLG XI-4</strong></span></li>
+            <li><span>Mata Pelajaran: <strong>KIK, PABP, PP, MTK, dan B. Indonesia</strong></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 <strong>WattWise</strong> &bull; Education for Sustainable Development PPLG XI-4. Hak Cipta Dilindungi.</p>
+        <p>Dibuat dengan dedikasi untuk keberlanjutan energi sekolah.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Panggil Chart.js, File Data Guru, dan main.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/data-perilaku-energi.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

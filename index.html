@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WattWise - Kampanye Hemat Energi di Lingkungan Sekolah. Proyek ESD (Education for Sustainable Development) Fase 1 oleh Rombel PPLG XI-4.">
+  <meta name="description" content="WattWise - Kampanye Hemat Energi di Lingkungan Sekolah. Proyek ESD (Education for Sustainable Development) oleh Rombel PPLG XI-4.">
   <title>WattWise - Kampanye Hemat Energi - Satu Sakelar Dimatikan, Sejuta Kebaikan Dinyalakan</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,17 +13,15 @@
   <header class="site-header">
     <div class="container">
       <nav class="navbar" aria-label="Navigasi Utama">
-        <!-- Logo WattWise -->
         <a href="index.html" class="brand-logo" title="WattWise Beranda">
           <div class="brand-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
             </svg>
           </div>
-          <span class="brand-name">Watt<span>Wise</span></span>
+          <span class="brand-name">WattWise</span></span>
         </a>
 
-        <!-- Tombol Menu Mobile Hamburger -->
         <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -32,44 +30,22 @@
           </svg>
         </button>
 
-        <!-- Menu Navigasi -->
         <ul class="nav-menu" id="navMenu">
-          <li>
-            <a href="index.html" class="nav-link active" aria-current="page">Beranda</a>
-          </li>
-          <li>
-            <a href="tentang.html" class="nav-link">Tentang</a>
-          </li>
-          <li>
-            <span class="nav-link disabled" title="Tersedia di Fase 2">
-              Data &amp; Fakta
-              <span class="nav-badge"></span>
-            </span>
-          </li>
-          <li>
-            <span class="nav-link disabled" title="Tersedia di Fase 3">
-              Aksi &amp; Rekomendasi
-              
-            </span>
-          </li>
+          <li><a href="index.html" class="nav-link active" aria-current="page">Beranda</a></li>
+          <li><a href="tentang.html" class="nav-link">Informasi</a></li>
+          <li><a href="data.html" class="nav-link">Data &amp; Fakta</a></li>
+          <li><a href="aksi.html" class="nav-link">Aksi</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- HERO SECTION  -->
+  <!-- HERO SECTION -->
   <main>
-    <section class="hero-section">
+    <section class="hero-section hero-dengan-gambar" style="background-image: url('assets/img/ruang322.png');">
       <div class="container">
         <div class="hero-wrapper">
-          <div class="badge-pill">
-            <span class="badge-dot"></span>
-            Proyek ESD &bull; PPLG XI-4
-          </div>
-
-          <h1 class="hero-title">
-            <span class="highlight">WattWise</span>
-          </h1>
+          <h1 class="hero-title">Watt<span>Wise</span></h1>
 
           <p class="hero-tagline">
             &ldquo;Satu Sakelar Dimatikan, Sejuta Kebaikan Dinyalakan&rdquo;
@@ -111,11 +87,10 @@
       </div>
     </section>
 
-    <!-- ==================== SECTION: MENGAPA HEMAT ENERGI ==================== -->
+    <!-- MENGAPA HEMAT ENERGI -->
     <section class="section section-bg-alt" id="mengapa">
       <div class="container">
         <div class="section-header">
-          
           <h2 class="section-title">Mengapa Hemat Energi Itu Penting?</h2>
           <p class="section-subtitle">
             Energi listrik adalah sumber utama dari aktivitas kita sekarang. Pengelolaan konsumsi listrik yang bijak di sekolah membawa dampak langsung bagi operasional, lingkungan, dan kesadaran ilmiah kita.
@@ -124,95 +99,106 @@
 
         <div class="cards-grid">
           <!-- Kartu 1: Efisien di Sekolah -->
-          <article class="card-item">
-            <div class="card-icon-wrap card-icon-green">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-              </svg>
+          <article class="card-item card-with-image">
+            <div class="card-banner-img">
+              <img src="assets/img/sakelar mati.jpg" alt="Mematikan sakelar lampu">
             </div>
-            <h3 class="card-title">Efisien di Sekolah</h3>
-            <p class="card-text">
-              Ruang kelas, laboratorium komputer, dan ruang guru mengonsumsi daya listrik yang signifikan. Pembiasaan mematikan lampu, kipas, monitor dan mancabut kabel charger saat tidak digunakan membantu efisiensi operasional sekolah.
-            </p>
-            <ul class="card-highlights">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Menekan beban tagihan listrik
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Memperpanjang usia peralatan elektronik
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Membentuk budaya disiplin siswa, guru, dan staf sekolah
-              </li>
-            </ul>
+            <div class="card-body-padded">
+              <h3 class="card-title">Efisien di Sekolah</h3>
+              <p class="card-text">
+                Ruang kelas, laboratorium komputer, dan ruang guru mengonsumsi daya listrik yang signifikan. Pembiasaan mematikan lampu, kipas, monitor dan mencabut kabel charger saat tidak digunakan membantu efisiensi operasional sekolah.
+              </p>
+              <ul class="card-highlights">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Menekan beban tagihan listrik
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Memperpanjang usia peralatan elektronik
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Membentuk budaya disiplin siswa, guru, dan staf sekolah
+                </li>
+              </ul>
+            </div>
           </article>
 
           <!-- Kartu 2: Bumi Lebih Hijau -->
-          <article class="card-item">
-            <div class="card-icon-wrap card-icon-yellow">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
+          <article class="card-item card-with-image">
+            <div class="card-banner-img">
+              <img src="assets/img/bumiHijau.jpg" alt="Bumi Hijau">
             </div>
-            <h3 class="card-title">Bumi Lebih Hijau</h3>
-            <p class="card-text">
-              Sebagian besar listrik masih bersumber dari pembangkit berbahan bakar fosil (batubara). Setiap kilowatt-jam (kWh) yang kita hemat secara langsung mengurangi emisi karbon dan laju pemanasan global.
-            </p>
-            <ul class="card-highlights">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Mengurangi jejak emisi CO2
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Menjaga cadangan sumber daya tak terbarukan
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Mendukung mitigasi perubahan iklim
-              </li>
-            </ul>
+            <div class="card-body-padded">
+              <h3 class="card-title">Bumi Lebih Hijau</h3>
+              <p class="card-text">
+                Sebagian besar listrik masih bersumber dari pembangkit berbahan bakar fosil (batubara). Setiap kilowatt-jam (kWh) yang kita hemat secara langsung mengurangi emisi karbon dan laju pemanasan global.
+              </p>
+              <ul class="card-highlights">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Mengurangi jejak emisi CO2
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Menjaga cadangan sumber daya tak terbarukan
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Mendukung mitigasi perubahan iklim
+                </li>
+              </ul>
+            </div>
           </article>
 
-          <!-- Kartu 3: Berbasis Data Real -->
-          <article class="card-item">
-            <div class="card-icon-wrap card-icon-green">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="20" x2="18" y2="10"></line>
-                <line x1="12" y1="20" x2="12" y2="4"></line>
-                <line x1="6" y1="20" x2="6" y2="14"></line>
-              </svg>
+          <!-- Kartu 3: Berbasis Data -->
+          <article class="card-item card-with-image">
+            <div class="card-banner-img">
+              <img src="assets/img/data.jpg" alt="Data Real">
             </div>
-            <h3 class="card-title">Berbasis Data Real</h3>
-            <p class="card-text">
-              Efisiensi tidak sekadar himbauan moral, melainkan didasarkan pada pengukuran terukur. Melalui audit energi dan visualisasi data pemakaian, warga sekolah dapat melihat bukti nyata dampak dari kebiasaan mereka.
-            </p>
-            <ul class="card-highlights">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Pemantauan konsumsi daya terukur
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Analisis perbandingan sebelum &amp; sesudah aksi
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Pengambilan keputusan berbasis fakta
-              </li>
-            </ul>
+            <div class="card-body-padded">
+              <h3 class="card-title">Berbasis Data Real</h3>
+              <p class="card-text">
+                Efisiensi tidak sekadar himbauan moral, melainkan didasarkan pada pengukuran terukur. Melalui audit energi dan visualisasi data pemakaian, warga sekolah dapat melihat bukti nyata dampak dari kebiasaan mereka.
+              </p>
+              <ul class="card-highlights">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Pemantauan konsumsi daya terukur
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Analisis perbandingan sebelum &amp; sesudah aksi
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Pengambilan keputusan berbasis fakta
+                </li>
+              </ul>
+            </div>
           </article>
+        </div>
+
+        <!-- Galeri Dokumentasi Sekolah -->
+        <div class="galeri-sekolah">
+          <div class="galeri-item">
+            <img src="assets/img/koridor206.jpg" alt="Pencahayaan Alami Koridor 206">
+            <div class="galeri-caption"><strong>Koridor Ruang 206:</strong> Memanfaatkan cahaya matahari alami di siang hari tanpa menyalakan lampu lorong.</div>
+          </div>
+          <div class="galeri-item">
+            <img src="assets/img/koridor219.jpg" alt="Pencahayaan Alami Koridor 219">
+            <div class="galeri-caption"><strong>Koridor Ruang 219:</strong> Ventilasi dan jendela kaca lebar mengurangi kebutuhan pendingin ruangan berlebih.</div>
+          </div>
+          <div class="galeri-item">
+            <img src="assets/img/ruang305orang.jpg" alt="Penggunaan Laptop di Kelas">
+            <div class="galeri-caption"><strong>Aktivitas Belajar Digital:</strong> Membiasakan mode hemat baterai dan mencabut charger saat penuh.</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- TEASER FASE 2 & 3 -->
+    <!-- PENGEMBANGAN PROYEK (FASE 2 & 3) -->
     <section class="section">
       <div class="container">
         <div class="teaser-container">
@@ -220,27 +206,31 @@
             <span class="teaser-pill">Pengembangan Proyek</span>
             <h2 class="teaser-title">Menuju Ekosistem WattWise Terintegrasi</h2>
             <p class="teaser-desc">
-              Berikut adalah fitur yang sedang kami siapkan untuk tahap selanjutnya:
+              Berikut adalah fitur yang kami sediakan:
             </p>
           </div>
 
           <div class="teaser-grid">
-            <!-- Teaser Box Fase 2 -->
-            <div class="teaser-box">
-              <span class="teaser-badge">Mendatang</span>
-              <h3>Visualisasi Data</h3>
-              <p>
-                Modul analisis yang menampilkan grafik konsumsi listrik harian di sekolah, simulasi daya per ruangan kelas/lab, dan kalkulator perkiraan biaya listrik.
-              </p>
+            <!-- Kartu Visualisasi Data (Foto Full Tanpa Bingkai Dalam) -->
+            <div class="bg-text-card" style="background-image: url('assets/img/panelsurya2.jpg');">
+              <div class="bg-text-content">
+                <span class="teaser-badge">Visualisasi Data</span>
+                <h3>Analisis Konsumsi Listrik</h3>
+                <p>
+                  Modul analisis yang menampilkan grafik konsumsi listrik di sekolah.
+                </p>
+              </div>
             </div>
 
-            <!-- Teaser Box Fase 3 -->
-            <div class="teaser-box">
-              <span class="teaser-badge">Mendatang</span>
-              <h3>Panduan Aksi</h3>
-              <p>
-                Sistem rekomendasi aksi harian, panduan SOP hemat energi sekolah, serta fitur komitmen partisipatif bagi seluruh warga sekolah.
-              </p>
+            <!-- Kartu Panduan Aksi (Foto Full Tanpa Bingkai Dalam) -->
+            <div class="bg-text-card" style="background-image: url('assets/img/emptyclass.jpg');">
+              <div class="bg-text-content">
+                <span class="teaser-badge">Rekomendasi Aksi</span>
+                <h3>Panduan Aksi</h3>
+                <p>
+                  Sistem rekomendasi aksi harian, panduan SOP hemat energi sekolah, serta fitur komitmen partisipatif bagi seluruh warga sekolah.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -262,7 +252,7 @@
             <span>WattWise</span>
           </div>
           <p>
-            Kampanye Hemat Energi sekolah terpadu di bawah kerangka <em>Education for Sustainable Development</em> (ESD).
+            Kampanye Hemat Energi sekolah terpadu di bawah kerangka <em>Education for Sustainable Development</em>.
           </p>
         </div>
 
@@ -279,14 +269,13 @@
           <h4>Informasi Tim</h4>
           <ul class="footer-links">
             <li><span>Rombel: <strong>PPLG XI-4</strong></span></li>
-            <li><span>Mata Pelajaran: <strong>KIK &amp; PABP</strong></span></li>
-
+            <li><span>Mata Pelajaran: <strong>KIK, PABP, PP, MTK, dan B. Indonesia</strong></span></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 <strong>WattWise</strong> &bull; Proyek ESD PPLG XI-4. Hak Cipta Dilindungi.</p>
+        <p>&copy; 2026 <strong>WattWise</strong> &bull; Education for Sustainable Development PPLG XI-4. Hak Cipta Dilindungi.</p>
         <p>Dibuat dengan dedikasi untuk keberlanjutan energi sekolah.</p>
       </div>
     </div>

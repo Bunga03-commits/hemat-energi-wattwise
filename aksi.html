@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aksi & Rekomendasi Hemat Energi - WattWise PPLG XI-4">
+  <title>Aksi &amp; Rekomendasi — WattWise</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVBAR -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigasi Utama">
+        <a href="index.html" class="brand-logo" title="WattWise Beranda">
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+          </div>
+          <span class="brand-name">Watt<span>Wise</span></span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Beranda</a></li>
+          <li><a href="tentang.html" class="nav-link">Informasi</a></li>
+          <li><a href="data.html" class="nav-link">Data &amp; Fakta</a></li>
+          <li><a href="aksi.html" class="nav-link active" aria-current="page">Aksi</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- KONTEN UTAMA FASE 3 -->
+  <main>
+    <!-- Banner Judul dengan Foto -->
+    <section class="section hero-dengan-gambar" style="background-image: url('assets/img/ruang301.jpg');">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 0;">
+          <h1 class="section-title">Panduan Aksi Hemat Energi</h1>
+          <p class="section-subtitle">
+            Berdasarkan data lapangan (skor terendah pada pembatasan gawai dan saling mengingatkan teman), berikut langkah nyata yang bisa kita terapkan di sekolah, rumah, maupun lingkungan sekitar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Kartu Rekomendasi, Checklist, & Komitmen -->
+    <section class="section section-bg-alt">
+      <div class="container">
+        <!-- 3 Kartu Rekomendasi Aksi (Foto Full Tanpa Padding Dalam) -->
+        <div class="cards-grid" style="margin-bottom: 3.5rem;">
+          <article class="card-item card-with-image">
+            <div class="card-banner-img">
+              <img src="assets/img/energysaver.jpg" alt="Mode Hemat Daya Laptop">
+            </div>
+            <div class="card-body-padded">
+              <span class="section-tag">Aksi Nyata 1</span>
+              <h3 class="card-title">Atur Daya Laptop &amp; Lab</h3>
+              <p class="card-text">
+                Aktifkan mode <em>Battery Saver</em>, turunkan kecerahan layar secukupnya, dan matikan komputer lab (<em>Shutdown</em>) setelah jam praktik selesai.
+              </p>
+            </div>
+          </article>
+
+          <article class="card-item card-with-image">
+            <div class="card-banner-img">
+              <img src="assets/img/cabut kabel.jpg" alt="Mencabut charger saat tidak dipakai">
+            </div>
+            <div class="card-body-padded">
+              <span class="section-tag">Aksi Nyata 2</span>
+              <h3 class="card-title">Cabut Charger &amp; Steker Listrik</h3>
+              <p class="card-text">
+                Jangan biarkan kabel charger HP atau laptop menancap di stopkontak saat baterai penuh karena tetap menyedot daya <em>standby</em>.
+              </p>
+            </div>
+          </article>
+
+          <article class="card-item card-with-image">
+            <div class="card-banner-img">
+              <img src="assets/img/benarSalah2.jpg" alt="Saling Mengingatkan Hemat Energi">
+            </div>
+            <div class="card-body-padded">
+              <span class="section-tag">Aksi Nyata 3</span>
+              <h3 class="card-title">Saling Mengingatkan</h3>
+              <p class="card-text">
+                Jadilah pelopor di kelas maupun di rumah dengan saling mengingatkan untuk mematikan lampu, kipas, dan AC saat ruangan tidak dipakai.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Fitur Interaktif 1 & 2: Checklist Harian & Form Komitmen -->
+        <div class="esd-story-grid">
+          <!-- Checklist Harian (Sekolah, Rumah, Lingkungan) -->
+          <div class="story-card">
+            <h2>Checklist Aksi Harian Saya</h2>
+            <p>Centang kebiasaan hemat energi yang sudah kamu lakukan hari ini di sekolah, rumah, maupun lingkungan sekitar:</p>
+
+            <div id="checklistAksi" style="display: flex; flex-direction: column; gap: 12px; margin: 1.25rem 0;">
+              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                <input type="checkbox" class="aksi-check" style="width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0;">
+                <span><strong>[Sekolah]</strong> Mematikan lampu kelas &amp; membuka tirai saat cahaya matahari cukup</span>
+              </label>
+              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                <input type="checkbox" class="aksi-check" style="width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0;">
+                <span><strong>[Sekolah]</strong> Melakukan <em>Shutdown</em> pada komputer/monitor lab setelah jam praktik</span>
+              </label>
+              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                <input type="checkbox" class="aksi-check" style="width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0;">
+                <span><strong>[Sekolah]</strong> Mengingatkan teman mematikan kipas/AC saat jam istirahat atau pulang</span>
+              </label>
+              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                <input type="checkbox" class="aksi-check" style="width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0;">
+                <span><strong>[Rumah]</strong> Mencabut charger HP &amp; laptop dari stopkontak setelah baterai penuh</span>
+              </label>
+              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                <input type="checkbox" class="aksi-check" style="width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0;">
+                <span><strong>[Rumah]</strong> Mematikan TV, kipas angin, atau lampu kamar tidur saat keluar ruangan</span>
+              </label>
+              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                <input type="checkbox" class="aksi-check" style="width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0;">
+                <span><strong>[Rumah]</strong> Menggunakan mode <em>Battery Saver</em> &amp; kecerahan layar secukupnya pada gawai</span>
+              </label>
+              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                <input type="checkbox" class="aksi-check" style="width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0;">
+                <span><strong>[Lingkungan]</strong> Menghemat penggunaan air bersih (mematikan keran rapat setelah dipakai)</span>
+              </label>
+              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                <input type="checkbox" class="aksi-check" style="width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0;">
+                <span><strong>[Lingkungan]</strong> Berjalan kaki, bersepeda, atau naik transportasi umum untuk jarak dekat</span>
+              </label>
+            </div>
+
+            <!-- Bar Progress Visual & Teks Status -->
+            <div style="background: var(--surface-alt); border-radius: 999px; height: 10px; overflow: hidden; margin-bottom: 10px;">
+              <div id="progressBarAksi" style="width: 0%; height: 100%; background: var(--primary); transition: width 0.3s ease;"></div>
+            </div>
+            <div id="statusChecklist" style="padding: 12px 16px; background: var(--primary-light); color: var(--primary-deep); border-radius: var(--radius-sm); font-weight: 600;">
+              Progress hari ini: 0 dari 8 aksi selesai (0%).
+            </div>
+          </div>
+
+          <!-- Form Komitmen Hemat Energi (Tersimpan Ringan di Browser) -->
+          <div class="mapel-card">
+            <h3>Tulis Komitmen Hemat Energi</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Tuliskan janji aksi nyatamu. Komitmen tersimpan otomatis dan menampilkan hingga 15 komitmen terbaru agar tetap ringan.
+            </p>
+            <form id="formKomitmen" style="display: flex; flex-direction: column; gap: 12px;">
+              <div>
+                <label for="namaSiswa" style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 4px;">Nama / Kelas</label>
+                <input type="text" id="namaSiswa" maxlength="40" required placeholder="Contoh: Bunga - PPLG XI-4" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-sm);">
+              </div>
+              <div>
+                <label for="isiKomitmen" style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 4px;">Janji Aksi Saya (Maks. 160 karakter)</label>
+                <textarea id="isiKomitmen" rows="3" maxlength="160" required placeholder="Saya berkomitmen untuk..." style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-sm);"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim &amp; Simpan Komitmen</button>
+            </form>
+
+            <!-- Daftar Komitmen Tersimpan -->
+            <div id="daftarKomitmen" style="margin-top: 1.25rem; display: flex; flex-direction: column; gap: 10px; max-height: 320px; overflow-y: auto;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <span>WattWise</span>
+          </div>
+          <p>
+            Kampanye Hemat Energi sekolah terpadu di bawah kerangka <em>Education for Sustainable Development</em>.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Navigasi Proyek</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Informasi</a></li>
+            <li><a href="data.html">Data &amp; Fakta</a></li>
+            <li><a href="aksi.html">Aksi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Informasi Tim</h4>
+          <ul class="footer-links">
+            <li><span>Rombel: <strong>PPLG XI-4</strong></span></li>
+            <li><span>Mata Pelajaran: <strong>KIK, PABP, PP, MTK, dan B. Indonesia</strong></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 <strong>WattWise</strong> &bull; Education for Sustainable Development PPLG XI-4. Hak Cipta Dilindungi.</p>
+        <p>Dibuat dengan dedikasi untuk keberlanjutan energi sekolah.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
